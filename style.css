@@ -28,6 +28,9 @@ html {
 body {
   font-size: 1.6rem;
   color:var(--Dark-Blue);
+  background-color: hsl(0, 100%, 74%);
+  background-image: url(images/bg-intro-mobile.png);
+  background-position: top; 
 }
 
 .attribution { font-size: 11px; text-align: center; }
@@ -35,4 +38,64 @@ body {
 
 .wrapper {
   padding: 9.8rem 2.4rem 6.8rem 2.4rem;
+}
+
+.intro__header {
+  color: #fff;
+  text-align: center;
+  font-size: 2.9rem;
+  line-height: 1.4;
+  margin-bottom: 2.2rem;
+}
+
+.intro_pgraph {
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 6.5rem;
+}
+
+.btn {
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 1.6rem;
+}
+
+.btn-purple {
+  background-color: var(--Blue);
+  font-weight: 600;
+  padding: 2.5rem 7rem 2rem 7rem;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.btn-green {
+  background-color: var(--Green);
+}
+
+.monthly {
+  font-weight: 100;
+}
+
+.cta {
+  margin-bottom: 2.3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.2);
 }

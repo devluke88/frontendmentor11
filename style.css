@@ -1,15 +1,13 @@
 :root {
   /*Primary*/
-  --Red: hsl(0, 100%, 74%);
-  --Green: hsl(154, 59%, 51%);
-  /*Accent*/
-  --Blue: hsl(248, 32%, 49%);
+  --Blue: hsl(223, 87%, 63%);
+  /*Secondary*/
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
   /*Neutral*/
-  --Dark-Blue: hsl(249, 10%, 26%); 
-  --Grayish-Blue: hsl(246, 25%, 77%);
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
 }
-
-/*- Weights: 400, 500, 600, 700*/
 
 *,
 *::after,
@@ -22,80 +20,141 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
 }
 
 body {
-  font-size: 1.6rem;
-  color:var(--Dark-Blue);
-  background-color: hsl(0, 100%, 74%);
-  background-image: url(images/bg-intro-mobile.png);
-  background-position: top; 
+  font-size: 2rem;
+  color:var(--Very-Dark-Blue);
 }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 .wrapper {
-  padding: 9.8rem 2.4rem 6.8rem 2.4rem;
+  max-width: 1440px;
+  padding: 8.5rem 2.7rem 12.1rem 2.7rem;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.intro__header {
-  color: #fff;
-  text-align: center;
-  font-size: 2.9rem;
-  line-height: 1.4;
-  margin-bottom: 2.2rem;
+.logo {
+  width: 50.4;
+  height: 1.7rem;
+  margin-bottom: 4.3rem;
 }
 
-.intro_pgraph {
-  color: #fff;
-  text-align: center;
-  font-size: 1.6rem;
-  letter-spacing: 0.01em;
-  margin-bottom: 6.5rem;
+.header {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--Gray);
+  margin-bottom: 2.3rem;
+}
+
+#soon {
+  font-weight: 700;
+  color: var(--Very-Dark-Blue);
+}
+
+.sub-header {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 3.3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 4.1rem;
+  padding: 0 1.9rem;
+  height: auto;
+ 
+}
+
+#email {
+  border: 1px solid var(--Pale-Blue);
+  border-radius: 20px;
+  padding: 1.2rem 0rem 1.2rem 3.3rem;
+  margin-bottom: 1rem;
+}
+
+#email::placeholder {
+  color: var(--Pale-Blue);
+}
+
+#error {
+  color: var(--Light-Red);
+  font-style: italic;
+  font-size: 1.2rem;
+  align-self: center;
+  margin: 0rem 0 2.5rem 0;
+  font-weight: 600;
+  display: none;
 }
 
 .btn {
-  color: #fff;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 1.6rem;
-}
-
-.btn-purple {
   background-color: var(--Blue);
-  font-weight: 600;
-  padding: 2.5rem 7rem 2rem 7rem;
-  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 1.2rem 6.2rem;
+  box-shadow: 0px 5px 10px hsla(223, 100%, 88%, 0.9);
+}
+
+.btn:hover {
+  background-color: hsl(223, 87%, 70%);
+  transition: all 0.5s;
+}
+
+.label {
+  display: none;
+}
+
+.dashboard {
+  max-width: 645px;
+  margin: 0 auto;
+}
+
+.dashboard-img {
+  width: 100%;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 11.8rem;
+  margin-bottom: 3rem;
+}
+
+i {
+  font-size: 1.5rem;
+  border: 1px solid hsla(0, 0%, 59%, 0.2);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px; 
   text-align: center;
+  line-height: 30px;
+  vertical-align: middle;
+  padding-top: 7px;
+  color: var(--Blue);
+  transition: all 0.5s;
 }
 
-.btn-green {
-  background-color: var(--Green);
+i:hover {
+  background-color: var(--Blue);
+  color: #fff;
 }
 
-.monthly {
-  font-weight: 100;
+.copy {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--Gray);
+  font-size: 1rem;
 }
 
-.cta {
-  margin-bottom: 2.3rem;
-  display: flex;
-  justify-content: center;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-
-.sign-up {
-  display: flex;
-  flex-direction: column;
-  padding: 2.5rem;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.2);
+.sr-only {
+  display: none;
 }

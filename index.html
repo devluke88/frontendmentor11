@@ -3,59 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="media.css">
-  <script src="https://kit.fontawesome.com/eb48754da6.js" crossorigin="anonymous"></script>
-  <title>Frontend Mentor | Ping coming soon page</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet"> 
+  <title>Frontend Mentor | Intro component with sign up form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
 </head>
 <body>
-  <div class="wrapper">
-    
-    <img src="images/logo.svg" alt="logo" class="logo">
-    <h1 class="header">We are launching <span id="soon">soon!</span></h1>
-    <h2 class="sub-header">Subscribe and get notified</h2>
-    
-    <form action="submit" class="form">
-        <input type="email" id="email" onBlur="document.getElementById('error').style.display = 'none'" name="email" class="input-alert" placeholder="Your email address..." required>
-        <p id="error">Please provide a valid email address</p>
-        <label for="email" class="label">Email</label>
-        <button class="btn" type="submit" onClick="validation()">Notify Me</button>
-    </form>
-    <div class="dashboard">
-      <img src="images/illustration-dashboard.png" alt="dashboard" class="dashboard-img">
-    </div>
+<div class="wrapper flex">
+  <!-- Left Box-->
+  <div class="box__left">
+    <h1 class="box__left--header">Learn to code by watching others</h1>
+    <p class="box__left--pgraph">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+    but understanding how developers think is invaluable.</p> 
   </div>
+  <!-- Right Box-->
+  <div class="box__right">
+    <!--Purple Button-->
+    <a href="#" class="btn btn-purple"><strong>Try it free 7 days <span class="monthly">then $20/mo. thereafter</span></strong></a>
+    <form class="sign-up" action="submit">
+      <!--Field no 1-->
+      <label for="fname" class="label">First Name</label>
+      <input id="fname" type="text" placeholder="First Name" required>
+      <p id="fname-error" class="error">First Name cannot be empty</p>
+      <!--Field no 2-->
+      <label for="lname" class="label">Last Name</label>
+      <input id="lname" type="text" placeholder="Last Name" required>
+      <p id="lname-error" class="error">Last Name cannot be empty</p>
+      <!--Field no 3-->
+      <label for="email" class="label">Email Address</label>
+      <input id="email" type="email" placeholder="Email Address" required>
+      <p id="email-error" class="error">Looks like this is not an email</p>
+      <!--Field no 4-->
+      <label for="pass" class="label">Password</label>
+      <input id="pass" type="password" placeholder="Password" required>
+      <p id="pass-error" class="error">Password cannot be empty</p>
+      <!--Green Button-->
+      <button href="#" class="btn btn-green" onClick="validation()" type="submit">Claim your free trial</button>
+      <!--Terms-->
+      <p class="terms">By clicking the button, you are agreeing to our <a href="#" class="termsAndServices">Terms and Services</a></p>
+    </form>
+  </div>
+</div>
+
   <footer>
-    <div class="social">
-      <a href="#" class="fb"><span class="sr-only">Facebook</span><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="twitter"><span class="sr-only">Twitter</span><i class="fab fa-twitter"></i></a>
-      <a href="#" class="insta"><span class="sr-only">Insta</span><i class="fab fa-instagram"></i></a>
-    </div>
-      <p class="copy">&copy; Copyright Ping. All rights reserved.</p>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">www.lukenow.com</a>.
+      Coded by <a href="www.lukenow.com">lukenow.com</a>.
     </p>
   </footer>
-
-<script>
-function validation() {
-  // Email Validation
-  var email = document.getElementById("email").innerHTML;
-  var errorMsg = document.getElementById("error");
-  
-    if ((/(.+)@(.+){2,}\.(.+){2,}/.test(email)) || email=="" || email==null) {
-      errorMsg.style.display = "block";
-    }
-    else {
-      errorMsg.style.display = "none";
-    }
-  }
-</script>
-
+<script src="js.js"></script>
 </body>
 </html>

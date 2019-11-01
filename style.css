@@ -80,6 +80,7 @@ body {
 }
 
 .btn-green {
+  border-style: none;
   display: flex;
   flex: 100%;
   justify-content: center;
@@ -93,6 +94,11 @@ body {
   border-bottom: 5px solid hsl(154, 59%, 46%);
   margin-bottom: 1.4rem;
   margin-top: 2.1rem;
+}
+
+.btn-green:hover {
+  background-color: hsl(154, 59%, 60%);
+  cursor: pointer;
 }
 
 .flex {
